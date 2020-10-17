@@ -1,0 +1,127 @@
+*,::after,::before{
+    margin: 0px;
+}
+
+
+
+.heading {
+    padding-top: 100px;
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+
+
+.service_header{
+    color: antiquewhite;
+    text-align: center;
+    margin-top: 50px;
+    text-decoration: underline;
+}
+.service_section{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.service_section img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+.container1 {
+    position: relative;
+    width: 20%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+  
+  .container1:hover .overlay {
+    opacity: 0.8;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+  @media (max-width: 989px) {
+
+    .container1 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+    .service_section{
+        flex-direction: column;
+    }
+    .hero{
+        height: 100%;
+        background-image: url('background2.jpeg');
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+    }
+
+  }
+
+  .copy-right{
+      color: white;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+      bottom: 0px;
+  }
+
+  @media (min-width: 989px) {
+
+    .hero{
+        height: 100vh;
+    /* position: relative; */
+    animation-name: example;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    }
+
+    @keyframes example {
+        0%   { background-image: url('background2.jpeg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation-timing-function: linear;
+        }
+        100%  { background-image: url('background3.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            animation-timing-function: linear;}
+    }
+
+  }
