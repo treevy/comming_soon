@@ -1,2 +1,2 @@
 # comming_soon 
-<a href="https://laughing-aryabhata-12cb0e.netlify.app"/>Website link</a>
+<a href="https://treevy.github.io/comming_soon/"/>Website link</a>
