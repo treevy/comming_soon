@@ -1,5 +1,6 @@
 *,::after,::before{
     margin: 0px;
+    transition: all 0.2s;
 }
 
 
@@ -22,50 +23,40 @@
     text-decoration: underline;
 }
 .service_section{
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
 }
-.service_section img{
+.cook{
     width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-.container1 {
-    position: relative;
-    width: 20%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: black;
-  }
+    object-fit: cover;
+    box-shadow: 5px 5px 15px -5px white;
+    transition: all 0.2s;
+}
+
+.container1{
+  width: 20%;
+}
+
+.container1:hover .cook{
+  transform: scale(1.1);
+  box-shadow: 15px 15px 25px -5px white;
+}
+
+.container1:hover .overlay{
+  animation: glow 1s ease-in-out infinite alternate;
   
-  .container1:hover .overlay {
-    opacity: 0.8;
-  }
-  
-  .text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
+}
+
+.overlay{
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 @keyframes glow {
     from {
       text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
@@ -76,12 +67,9 @@
     }
   }
   @media (max-width: 989px) {
-
-    .container1 {
-        width: 100%;
-        margin-bottom: 20px;
-      }
-
+    .container1{
+      width: 100%;
+    }
     .service_section{
         flex-direction: column;
     }
@@ -90,6 +78,10 @@
         background-image: url('background2.jpeg');
         background-repeat: repeat-y;
         background-attachment: fixed;
+    }
+
+    .overlay{
+      font-size: 2rem;
     }
 
   }
@@ -101,6 +93,15 @@
       position: fixed;
       bottom: 0px;
   }
+
+  .copy-right2{
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-top: 80px;
+    padding-bottom: 50px;
+    
+}
 
   @media (min-width: 989px) {
 
